@@ -37,13 +37,13 @@ public class User_Dao {
 	
 	public List<Users> userList() {
 		Session session = sf.openSession();
-		@SuppressWarnings({ "unchecked", "deprecation" })
+		@SuppressWarnings({ "unchecked" })
 		List<Users>list=session.createCriteria(Users.class).list();
 		return list;
 	}
 	
 	public List<Users> loadUser() {
-		@SuppressWarnings({ "deprecation", "unchecked" })
+		@SuppressWarnings({ "unchecked" })
 		List<Users> list = (List<Users>) sf.openSession()
 		.createCriteria(Users.class).list();
 		return list;

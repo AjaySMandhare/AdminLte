@@ -15,6 +15,7 @@ import com.javabykiran.model.User;
 
 
 
+@SuppressWarnings({ "unused", "deprecation" })
 @Repository
 public class LoginDao {
 
