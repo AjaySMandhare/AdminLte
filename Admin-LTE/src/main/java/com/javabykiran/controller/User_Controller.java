@@ -13,7 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.javabykiran.model.Operatorlist;
 import com.javabykiran.model.User;
 import com.javabykiran.model.Users;
-import com.javabykiran.service.OperatorService;
 import com.javabykiran.service.User_Service;
 
 @Controller
@@ -22,9 +21,7 @@ public class User_Controller {
 	@Autowired
 	private User_Service user_Service;
 
-	@Autowired
-	OperatorService operatorService;
-
+	
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public ModelAndView register(@ModelAttribute("model") User user, Model model) {
 		System.out.println(user.getEmail());
@@ -70,20 +67,5 @@ public class User_Controller {
 		}
 	}
 
-	@RequestMapping(value = "/operatorList")
-	public ModelAndView operatorList(Model model) {
-		ModelAndView mv = new ModelAndView();
-		List<Operatorlist> operatorList = operatorService.OperatorList();
-		System.out.println(operatorList);
-		if (operatorList != null) {
-
-			mv.setViewName("operators");
-			mv.addObject("operatorList", operatorList);
-			return mv;
-		} else {
-			mv.addObject("operatorList", "Record Not Found");
-			return new ModelAndView("dashboard");
-		}
-
-	}
+	
 }

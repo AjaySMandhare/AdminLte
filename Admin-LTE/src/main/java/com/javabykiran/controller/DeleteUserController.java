@@ -12,7 +12,6 @@ import com.javabykiran.model.Users;
 import com.javabykiran.service.DeleteUserService;
 import com.javabykiran.service.User_Service;
 
-
 @Controller
 public class DeleteUserController {
 	
@@ -57,5 +56,7 @@ public class DeleteUserController {
 		
 	}
 	
-	}
+	
+	
 
+}
