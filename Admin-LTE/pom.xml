@@ -1,13 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.javabykiran.config</groupId>
-  <artifactId>Admin-LTE</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>Admin-LTE Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.javabykiran.config</groupId>
+	<artifactId>Admin-LTE</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Admin-LTE Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<properties>
 		<!-- Generic properties -->
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,13 +24,13 @@
 		<mysql.connector.version>5.0.4</mysql.connector.version>
 	</properties>
 	<dependencies>
-	
-	<!-- https://mvnrepository.com/artifact/jstl/jstl -->
-<dependency>
-    <groupId>jstl</groupId>
-    <artifactId>jstl</artifactId>
-    <version>1.2</version>
-</dependency>
+
+		<!-- https://mvnrepository.com/artifact/jstl/jstl -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 
 		<!-- Spring MVC Dependency -->
 		<dependency>
@@ -69,7 +70,7 @@
 		</dependency>
 		<!-- Spring IOC end -->
 		<!-- Spring Hibernate start -->
-		 <dependency>
+		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.connector.version}</version>
@@ -93,10 +94,37 @@
 			<version>${spring-framework.version}</version>
 		</dependency>
 		<!-- Spring AOP jars...end -->
-		
+
 	</dependencies>
 
-  <build>
-    <finalName>Admin-LTE</finalName>
-   </build>
+	<build>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.3</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.github.jsimone</groupId>
+									<artifactId>webapp-runner</artifactId>
+									<version>8.0.30.2</version>
+									<destFileName>webapp-runner.jar</destFileName>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+		<finalName>Admin-LTE</finalName>
+	</build>
 </project>
