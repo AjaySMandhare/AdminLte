@@ -45,11 +45,11 @@ public class DashboardController {
 		return new ModelAndView("downloads");
 	}
 
-	/*@RequestMapping(value = "/operators")
+	@RequestMapping(value = "/operators")
 	public ModelAndView operatorspage() {
 		return new ModelAndView("operators");
 	}
-*/
+
 	@RequestMapping(value = "/logout")
 	public ModelAndView Logout() {
 		return new ModelAndView("logout");

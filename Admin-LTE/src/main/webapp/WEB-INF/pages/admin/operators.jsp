@@ -1,5 +1,4 @@
-<%@page import="java.util.List"%>
-<%@page import="com.javabykiran.model.Operatorlist"%>
+
 <%@page import="java.util.ArrayList"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -114,13 +113,9 @@
           </ol>
         </section>
         
-        <%
-        List<Operatorlist> operatorList =(List<Operatorlist>) request.getAttribute("operatorList");
-			%>
-        
+       
         
         <!-- Main content -->
-        <form>
         <section class="content">
           <div class="row">
             <div class="col-xs-12">
@@ -135,73 +130,71 @@
                   <table class="table table-hover">
                     <tr>
                       <th>ID</th>
-                      <th>Operator</th>
-                      <th>Date</th>
-                      <th>Status</th>
-                      <th>Reason</th>
-                    </tr>
-                    
-                    				<%
-										int i = 0;
-										for (Operatorlist name:operatorList) {
-											i++;
-										
-										%>
-                    
-                    <tr>
-											<%-- <td class="text-center"><input type="checkbox" name="id[]" value="<%out.println(name.getId());%>"/></td> --%>
-											<td class="text-center"><input type="checkbox" name="id[]" value="<%=i%>"></td>
-											<td class="text-center"><% out.println(i); %></td>
-											<%-- <td class="text-center"><% out.println(name.getId()); %></td> --%>
-											<td class="text-center"><% out.println(name.getOperator()); %></td>
-											<td class="text-center"><% out.println(name.getStatus()); %></td>
-											<td class="text-center"><% out.println(name.getDate()); %></td>
-											<td class="text-center"><% out.println(name.getReason()); %></td>
-											
-																	
-											
-																				
-												
-									</tr>
-									</tbody>
-								<%
-										}
-								%>
-                    
-                    <!-- <tr>
-                      <td>183</td>
-                      <td>Airtel</td>
-                      <td>11-7-2014</td>
-                      <td><span class="label label-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                      <th>Person</th>
+                      <th>For</th>
+                      <th>Prefered Way to Connect</th>
+                      <th>Contact</th>
+                      <th>Timings</th>
                     </tr>
                     <tr>
-                      <td>219</td>
-                      <td>Voda</td>
-                      <td>11-7-2014</td>
-                      <td><span class="label label-warning">Pending</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                      <td>01</td>
+                      <td>Kiran</td>
+                      <td>Urgent Technical Help</td>
+                      <td><span class="label label-success">Whats App Only</span></td>
+                      <td>9552343698</td>
+                      <td>07:00 AM to 10:00 PM <b>Monday-Sunday</b></td>
                     </tr>
                     <tr>
-                      <td>657</td>
-                      <td>Idea</td>
-                      <td>11-7-2014</td>
-                      <td><span class="label label-primary">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                      <td>02</td>
+                      <td>Neelam</td>
+                      <td>Technical Discussion (Errors, Software, Technical Materials)</td>
+                      <td><span class="label label-success">Whats App</span>
+                          <span class="label label-info">Phone Call</span>
+                          <span class="label label-warning">SMS</span>
+                          <span class="label label-danger">eMail</span>
+                      </td>
+                      <td>7066885937</td>
+                      <td>09:00 AM to 06:00 PM <b>Monday-Saturday</b></td>
                     </tr>
                     <tr>
-                      <td>175</td>
-                      <td>Bsnl</td>
-                      <td>11-7-2014</td>
-                      <td><span class="label label-danger">Denied</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                      <td>03</td>
+                      <td>Seema</td>
+                      <td>Administration (Fees, ID Card, Certificates, WhatsApp Group, Enquiry)</td>
+                      <td><span class="label label-success">Whats App</span>
+                          <span class="label label-info">Phone Call</span>
+                          <span class="label label-warning">SMS</span>
+                          <span class="label label-danger">eMail</span>
+                      </td>
+                      <td>8888558802</td>
+                      <td>09:00 AM to 06:00 PM <b>Monday-Saturday</b></td>
                     </tr>
- -->                  </table>
+                    <tr>
+                      <td>04</td>
+                      <td>Varsha</td>
+                      <td>Enquiry(Course Details, Fees, Enquiry)</td>
+                      <td><span class="label label-success">Whats App</span>
+                          <span class="label label-info">Phone Call</span>
+                          <span class="label label-warning">SMS</span>
+                          <span class="label label-danger">eMail</span>
+                      </td><td>8888809416</td>
+                      <td>09:00 AM to 06:00 PM <b>Monday to Friday and Sunday</b></td>
+                    </tr>
+                    <tr>
+                      <td>05</td>
+                      <td>Darshit</td>
+                      <td>Technical Help</td>
+                      <td><span class="label label-success">Whats App Only</span></td>
+                      <td>8866888662</td>
+                      <td>08:30 AM to 02:00 PM <b>Saturday-Sunday</b></td>
+                    </tr>
+                   
+                  </table>
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
             </div>
           </div>
           
+
 
         </section><!-- /.content -->
         </form>

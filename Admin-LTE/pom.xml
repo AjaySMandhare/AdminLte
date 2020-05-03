@@ -100,26 +100,7 @@
 	<build>
 
 		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-			<!-- Embedded Apache Tomcat required for testing war -->
-			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.2</version>
-				<configuration>
-					<path>/</path>
-					<port>8090</port>
-				</configuration>
-			</plugin>
 			
-		
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -143,8 +124,10 @@
 					</execution>
 				</executions>
 			</plugin>
-		</plugins>
+			</plugins>
+		
 
 		<finalName>Admin-LTE</finalName>
+		
 	</build>
 </project>
