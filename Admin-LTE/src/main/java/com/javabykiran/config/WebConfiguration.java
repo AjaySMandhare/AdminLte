@@ -25,7 +25,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableAsync
 @EnableAspectJAutoProxy
 public class WebConfiguration implements WebMvcConfigurer {
-/*	@Bean
+	@Bean
 	public InternalResourceViewResolver myresolver() {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setPrefix("/WEB-INF/pages/admin/");
@@ -34,17 +34,17 @@ public class WebConfiguration implements WebMvcConfigurer {
 	}
 
 
-public void addResourceHandlers(ResourceHandlerRegistry registry) {
+	/* public void addResourceHandlers(ResourceHandlerRegistry registry) {
    //  Add css file resource url here
        registry.addResourceHandler("/resources/**").addResourceLocations("/bootsrap/css")
        .setCacheControl(CacheControl.maxAge(2, TimeUnit.HOURS).cachePublic());
      }
 */
 	
-	 public void configureViewResolvers(ViewResolverRegistry registry) {
+	 /*public void configureViewResolvers(ViewResolverRegistry registry) {
 	      registry.jsp("/WEB-INF/pages/admin/", ".jsp");
 	      
-	   }
+	   }*/
 
 	  
 	   public void addResourceHandlers(ResourceHandlerRegistry registry) {
