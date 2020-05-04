@@ -22,6 +22,7 @@ public class LoginDao {
 	@Autowired
 	SessionFactory sessionFactory;
 
+	@SuppressWarnings("unchecked")
 	public User checkUser(User user) {
 		Session session = sessionFactory.openSession();
 
